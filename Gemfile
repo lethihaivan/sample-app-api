@@ -11,6 +11,7 @@ gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.3", ">= 6.1.3.2"
 gem "webpacker", "~> 5.0"
 gem "bcrypt", "~> 3.1.7"
+gem "config"
 gem "will_paginate", "3.1.8"
 
 group :development, :test do
@@ -35,5 +36,8 @@ group :test do
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "shoulda-matchers", "~> 4.0"
+  gem "database_cleaner"
+  gem "simplecov-rcov", require: false
 end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
