@@ -10,6 +10,7 @@ gem "mysql2", "~> 0.5"
 gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.3", ">= 6.1.3.2"
 gem "webpacker", "~> 5.0"
+gem "bcrypt", "~> 3.1.7"
 gem "will_paginate", "3.1.8"
 
 group :development, :test do
