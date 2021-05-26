@@ -13,6 +13,7 @@ gem "webpacker", "~> 5.0"
 gem "bcrypt", "~> 3.1.7"
 gem "config"
 gem "will_paginate", "3.1.8"
+gem "active_model_serializers", "~> 0.10.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
