@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_24_090052) do
+ActiveRecord::Schema.define(version: 2021_05_26_163525) do
 
   create_table "microposts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "content"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 2021_05_24_090052) do
     t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "auth_token"
+    t.index ["auth_token"], name: "index_users_on_auth_token"
   end
 
   add_foreign_key "microposts", "users"
