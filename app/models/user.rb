@@ -17,9 +17,14 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
   has_secure_password
+  after_create :generate_new_auth_token
   scope :newest, ->{order created_at: :desc}
   
   def follow other_user
     following << other_user
+  end
+  
+  def destroy_token
+    self.update_columns auth_token: nil
   end
 end
